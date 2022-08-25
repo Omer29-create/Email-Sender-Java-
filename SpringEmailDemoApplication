@@ -1,0 +1,15 @@
+@SpringBootApplication
+public class SpringEmailDemoApplication {
+
+	@Autowired
+	private EmailSenderService senderService;
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringEmailDemoApplication.class, args);
+	}
+
+	@EventListener(ApplicationReadyEvent.class)
+	public void sendMail() {
+		senderService.sendEmail("empfänger@gmail.com", "This is subject", "Bu mesaj Java'dan gönerilmistir");
+	}
+}
