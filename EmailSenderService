@@ -1,9 +1,5 @@
 @Service
 
-
-
-
-
 public class EmailSenderService {
 
     @Autowired
