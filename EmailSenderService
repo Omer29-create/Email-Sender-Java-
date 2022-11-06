@@ -7,8 +7,6 @@
 
 
 
-
-
 public class EmailSenderService {
 
     @Autowired
